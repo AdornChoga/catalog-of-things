@@ -1,8 +1,10 @@
 require_relative '../classes/item'
+require_relative '../classes/author.rb'
 
 describe Item do
   before(:each) do
-    @item = Item.new('2011/10/01', false)
+    @author = Author.new('Jane', 'Doe')
+    @item = Item.new('2011/10/01', false, author)
   end
 
   context '#initialize' do
@@ -20,6 +22,11 @@ describe Item do
 
     it 'should have a archived' do
       expect(@item.archived).to eq(false)
+    end
+
+    it 'should have an author property' do
+      item_author = @item.author
+      expect(item_author).to eq(@author)
     end
   end
 
