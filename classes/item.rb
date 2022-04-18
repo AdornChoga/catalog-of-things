@@ -16,4 +16,6 @@ class Item
         return true unless num_of_years < 10
         false
     end
+
+    private :can_be_archived?
 end

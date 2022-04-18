@@ -22,15 +22,4 @@ describe Item do
             expect(@item.archived).to eq(false)
         end
     end
-
-    context 'test methods in the items class to' do
-        it 'can_be_archived? method should' do
-            expect(@item.can_be_archived?).to eq(true)
-        end 
-
-        it 'can_be_archived? method should return false' do
-            item_instance = Item.new('2020/10/01', true)
-            expect(item_instance.can_be_archived?).to eq(false)
-        end
-    end
 end
