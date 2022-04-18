@@ -2,6 +2,7 @@ require 'json'
 
 module DataOperations
   def fetch_data(file)
+    Dir.mkdir('data') unless Dir.exist?('data')
     file = "./data/#{file}.json"
     File.new(file, 'a+') unless File.exist?(file)
     File.write(file, '[]') if File.empty?(file)
