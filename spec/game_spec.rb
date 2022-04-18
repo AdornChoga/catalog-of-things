@@ -3,7 +3,7 @@ require './classes/item'
 
 describe Game do
   before :each do
-    @game = Game.new(true, '2019/01/01')
+    @game = Game.new(true, '2019/01/01', '2011/01/01', false)
   end
 
   context '#initialize' do
@@ -26,20 +26,18 @@ describe Game do
 
   context 'testing Game methods' do
     it 'can_archived should return true' do
-      item = Item.new('2010/01/01', true)
       archiving = @game.can_be_archived?
       expect(archiving).to eq true
     end
 
     it 'can_archived should return false' do
-      item = Item.new('2015/01/01', true)
-      archiving = @game.can_be_archived?
+      game_instance = Game.new(true, '2022/01/01', '2011/01/01', false)
+      archiving = game_instance.can_be_archived?
       expect(archiving).to eq false
     end
 
     it 'can_archived should return false' do
-      game_instance = Game.new(true, '2022/01/01')
-      item = Item.new('2010/01/01', true)
+      game_instance = Game.new(true, '2020/01/01', '2015/01/01', false)
       archiving = game_instance.can_be_archived?
       expect(archiving).to eq false
     end
