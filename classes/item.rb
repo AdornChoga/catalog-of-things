@@ -1,13 +1,14 @@
 require 'date'
 
 class Item
-  attr_reader :id, :archived
+  attr_reader :id, :archived, :genre
   attr_accessor :publish_date
 
   def initialize(publish_date, archived)
     @id = rand(1..100)
     @publish_date = Date.parse(publish_date)
     @archived = archived
+    @genre = nil
   end
 
   def can_be_archived?
@@ -21,6 +22,11 @@ class Item
 
   def move_to_archive
     @archived = true if can_be_archived?
+  end
+
+  def genre=(genre)
+    @genre = genre
+    genre.items.push(self) unless genre.items.include?(self)
   end
 
   private :can_be_archived?
