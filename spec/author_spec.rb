@@ -24,24 +24,25 @@ describe Author do
 
   context 'testing instance methods' do
     it 'increase author items count by 1' do
-      author_items = @author.items.size
+      initial_items = @author.items.size
       item_instance = Item.new('2011/10/01', false, @author)
       @author.add_item(item_instance)
-      expect(items).to eq (items + 1)
+      new_items = @author.items.size
+      expect(new_items).to eq(initial_items + 1)
     end
 
     it 'author item should be instance of Item class' do
       item_instance = Item.new('2011/10/01', false, @author)
       @author.add_item(item_instance)
-      author_item = @author.item.first
-      expect(author).to be instance_of Item
+      author_item = @author.items.first
+      expect(author_item).to be_an_instance_of Item
     end
 
     it 'should add self as a property of the item object' do
       item_instance = Item.new('2011/10/01', false, @author)
       @author.add_item(item_instance)
       item_author = item_instance.author
-      expect(item_author).to be instance_of Author
+      expect(item_author).to be_an_instance_of Author
     end
   end
 end
