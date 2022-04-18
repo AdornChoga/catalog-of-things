@@ -37,6 +37,11 @@ Clone the repo and run bundle install in the command line to install the depende
 - Twitter: [@adornchoga](https://twitter.com/adorn_choga)
 - LinkedIn: [@adornchoga](https://www.linkedin.com/in/adorn-choga)
 
+👤 **Jos Kalenda**
+
+- GitHub: [@Jos](https://github.com/joskalenda)
+- LinkedIn: [@Jos](https://www.linkedin.com/in/joskalenda/)
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
