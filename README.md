@@ -1,6 +1,6 @@
 # Catalog of things
 
-
+![screenshot](./catalog_of_my_things.png)
 
 ## Built With
 
