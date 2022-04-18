@@ -7,7 +7,7 @@ describe Game do
 
   context '#initialize' do
     it 'game should be an instance of Game' do
-      expect(@game.initialize).to be_an_instance_of Game
+      expect(@game).to be_an_instance_of Game
     end
 
     it 'should have multiplayer instance variable' do
