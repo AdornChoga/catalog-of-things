@@ -6,7 +6,9 @@ describe MusicAlbum do
     end
 
     describe '#initialize' do
-        expect(@album).to be_an_instance_of MusicAlbum
+        it 'should be an instance of the MusicAlbum class' do
+            expect(@album).to be_an_instance_of MusicAlbum
+        end
     end
 
     context 'test can_be_archived? method' do
