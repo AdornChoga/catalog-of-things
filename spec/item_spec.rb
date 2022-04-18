@@ -22,4 +22,17 @@ describe Item do
             expect(@item.archived).to eq(false)
         end
     end
+
+    context 'test methods in the items class to' do
+        it 'move_to_archive method should change archived attribute to true' do
+            @item.move_to_archive
+            expect(@item.archived).to eq(true)
+        end 
+
+        it 'move_to_archive method should retain the value of the archived attribute' do
+            item_instance = Item.new('2020/10/01', false)
+            item_instance.move_to_archive
+            expect(item_instance.archived).to eq(false)
+        end
+    end
 end

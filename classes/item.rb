@@ -17,5 +17,9 @@ class Item
         false
     end
 
+    def move_to_archive
+        @archived = true unless !can_be_archived?
+    end
+
     private :can_be_archived?
 end
