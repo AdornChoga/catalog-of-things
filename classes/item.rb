@@ -9,4 +9,11 @@ class Item
         @archived = archived
     end
     
+    def can_be_archived?
+        date_published = publish_date.year
+        date_now = Date.today.year
+        num_of_years = date_now - date_published
+        return true unless num_of_years < 10
+        false
+    end
 end
