@@ -2,12 +2,17 @@ require 'date'
 
 class Item
   attr_reader :id, :archived
-  attr_accessor :publish_date
+  attr_accessor :publish_date, :label
 
   def initialize(publish_date, archived)
     @id = rand(1..100)
     @publish_date = Date.parse(publish_date)
     @archived = archived
+  end
+
+  def add_label(label)
+    @label = label
+    label.items.push(self) unless label.items.include?(self)
   end
 
   def can_be_archived?
