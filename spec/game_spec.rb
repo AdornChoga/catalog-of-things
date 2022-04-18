@@ -23,23 +23,4 @@ describe Game do
       expect(@game.last_played_at).to be_kind_of Date
     end
   end
-
-  context 'testing Game methods' do
-    it 'can_archived should return true' do
-      archiving = @game.can_be_archived?
-      expect(archiving).to eq true
-    end
-
-    it 'can_archived should return false' do
-      game_instance = Game.new(true, '2022/01/01', '2011/01/01', false)
-      archiving = game_instance.can_be_archived?
-      expect(archiving).to eq false
-    end
-
-    it 'can_archived should return false' do
-      game_instance = Game.new(true, '2020/01/01', '2015/01/01', false)
-      archiving = game_instance.can_be_archived?
-      expect(archiving).to eq false
-    end
-  end
 end
