@@ -12,4 +12,6 @@ class MusicAlbum < Item
         return true if super && on_spotify
         false
     end
+
+    private :can_be_archived?
 end
