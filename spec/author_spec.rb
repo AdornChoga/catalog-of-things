@@ -2,7 +2,7 @@ require './classes/author'
 
 describe Author do
   before :each do
-    @author = Author.new('Dean', 'Kutz')
+    @author = Author.new('Dean', 'Kutz', '2011/10/01', false)
   end
 
   context '#initialize' do
