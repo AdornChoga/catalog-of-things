@@ -1,4 +1,4 @@
-require_relative './classes/bookmanager'
+require './classes/bookmanager'
 
 class App
   include Bookmanager

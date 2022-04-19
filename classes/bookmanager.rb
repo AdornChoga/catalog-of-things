@@ -1,10 +1,9 @@
 require 'json'
-require_relative './classes/book'
+require './classes/book'
 
 module Bookmanager
   def books_operations
     puts 'Enter a number to choose a type '
-    puts
     puts '
     1 - create_new_book
     2 - add_new_book

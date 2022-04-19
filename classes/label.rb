@@ -1,4 +1,4 @@
-require './item'
+require './classes/item'
 
 class Label
   attr_reader :title, :color, :items, :id

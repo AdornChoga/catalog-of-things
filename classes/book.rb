@@ -1,10 +1,11 @@
-require './item'
+require './classes/item'
+require 'json'
 
 class Book < Item
   attr_accessor :pubisher, :cover_date
 
   def initialize(pubisher, cover_state, publish_date)
-    super(publish_date)
+    super(publish_date, true)
     @id = rand(1..50)
     @pubisher = pubisher
     @cover_state = cover_state.to_s
