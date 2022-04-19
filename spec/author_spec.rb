@@ -20,6 +20,11 @@ describe Author do
       l_name = @author.last_name
       expect(l_name).to eq 'Kutz'
     end
+
+    it 'should have an items arrary instance variable' do
+      items = @author.items
+      expect(items).to eq []
+    end
   end
 
   context 'testing instance methods' do
