@@ -3,7 +3,7 @@ require './classes/label'
 
 describe Label do
   context 'Tests for the label class' do
-    item = Item.new('2010/1/1', true)
+    # item = Item.new('2010/1/1', true)
 
     label = Label.new('test_title', 'red')
 
