@@ -1,7 +1,6 @@
 require './classes/bookmanager'
 
 class App
-  include Bookmanager
 
   def list_of_options
     puts '
@@ -16,7 +15,7 @@ class App
   def operations(option)
     case option
     when 1
-      books_operations
+      # books_operations
     when 2
       puts 'Games operations'
     when 3
