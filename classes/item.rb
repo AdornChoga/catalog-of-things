@@ -1,8 +1,8 @@
 require 'date'
 
 class Item
-  attr_reader :id, :archived
-  attr_accessor :publish_date, :author
+  attr_reader :id, :archived, :author
+  attr_accessor :publish_date
 
   def initialize(publish_date, archived)
     @id = rand(1..100)
@@ -18,6 +18,11 @@ class Item
     return true unless num_of_years < 10
 
     false
+  end
+
+  def add_author=(author)
+    @author = author
+    author.items << self unless author.items.include?(self)
   end
 
   def move_to_archive
