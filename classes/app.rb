@@ -1,4 +1,8 @@
+require_relative './classes/bookmanager'
+
 class App
+  include Bookmanager
+
   def list_of_options
     puts '
     1 - Books
@@ -12,7 +16,7 @@ class App
   def operations(option)
     case option
     when 1
-      puts 'Books operations'
+      books_operations
     when 2
       puts 'Games operations'
     when 3

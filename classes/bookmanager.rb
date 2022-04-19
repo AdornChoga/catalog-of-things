@@ -1,7 +1,29 @@
-require './book'
 require 'json'
+require_relative './classes/book'
 
-class Bookmanager
+module Bookmanager
+  def books_operations
+    puts 'Enter a number to choose a type '
+    puts
+    puts '
+    1 - create_new_book
+    2 - add_new_book
+    3 - liat_all_book
+    6 - Exit'
+
+    option = gets.chomp.to_i
+    case option
+    when 1
+      create_new_book
+    when 2
+      add_new_book
+    when 3
+      liat_all_book
+    else
+      puts 'Invalid input. Please enter a correct number'
+    end
+  end
+
   def to_get_publisher
     state = false
     until state
@@ -35,5 +57,9 @@ class Bookmanager
     cover_state = to_get_cover_state
     publish_date = to_get_publish_date.to_s
     create_new_book(publisher, cover_state, publish_date)
+  end
+
+  def liat_all_book
+    # in progess
   end
 end
