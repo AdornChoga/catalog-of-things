@@ -64,7 +64,7 @@ class MusicAlbumManager
   end
 
   def menu_list
-    puts 'Nice choice! What would you like to do?'
+    puts 'Excellent choice! What would you like to do?'
     puts '
     1 - Add a music album
     2 - List all music albums'
