@@ -24,7 +24,7 @@ class MusicAlbumManager
     album = MusicAlbum.new(publish_date, archived, on_spotify)
 
     genre_object = add_album_to_genre
-     
+
     album.genre = genre_object
 
     @music_albums << album.to_hash
@@ -39,13 +39,11 @@ class MusicAlbumManager
     puts 'Choose the genre for your album'
     @genre_manager.list_genres
     genre_index = gets.chomp.to_i
-    
-    if genre_index == @genre_manager.genre_data.length
-        return @genre_manager.create_genre
-    end
+
+    return @genre_manager.create_genre if genre_index == @genre_manager.genre_data.length
 
     hashed_genre = @genre_manager.genre_data[genre_index]
-    return @genre_manager.format_genre(hashed_genre)
+    @genre_manager.format_genre(hashed_genre)
   end
 
   def list_albums

@@ -2,33 +2,34 @@ require_relative '../structure/genre'
 require_relative '../../module/data_operations'
 
 class GenreManager
-include DataOperations
+  include DataOperations
 
-    attr_accessor :genre_data
-    def initialize
-        @genre_data = fetch_data('genre');
+  attr_accessor :genre_data
+
+  def initialize
+    @genre_data = fetch_data('genre')
+  end
+
+  def create_genre
+    puts 'Enter the name of the genre:'
+    name = gets.chomp
+    new_genre = Genre.new(name)
+    @genre_data << new_genre.to_hash
+    update_data('genre', new_genre.to_hash)
+    new_genre
+  end
+
+  def list_genres
+    @genre_data.each_with_index do |genre, index|
+      puts "(#{index}) #{genre['id']} - #{genre['name']}"
     end
 
-    def create_genre
-        puts 'Enter the name of the genre:'
-        name = gets.chomp
-        new_genre = Genre.new(name)
-        @genre_data << new_genre.to_hash
-        update_data('genre', new_genre.to_hash)
-        return new_genre
-    end
+    puts "(#{@genre_data.length}) - Create a new genre"
+  end
 
-    def list_genres
-        @genre_data.each_with_index do |genre, index|
-            puts "(#{index}) #{genre['id']} - #{genre['name']}"
-        end
-
-        puts "(#{@genre_data.length}) - Create a new genre"
-    end
-
-    def format_genre(hashed_genre)
-        genre = Genre.new(hashed_genre['name'])
-        genre.id = hashed_genre['id']
-        return genre
-    end
+  def format_genre(hashed_genre)
+    genre = Genre.new(hashed_genre['name'])
+    genre.id = hashed_genre['id']
+    genre
+  end
 end

@@ -19,7 +19,7 @@ class MusicAlbum < Item
       'publish_date' => @publish_date.to_s,
       'archived' => @archived,
       'on_spotify' => @on_spotify,
-      'genre' => { 'name' => @genre.name, 'id' => @genre.id},
+      'genre' => { 'name' => @genre.name, 'id' => @genre.id }
     }
   end
 
