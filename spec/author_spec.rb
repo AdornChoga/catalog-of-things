@@ -43,7 +43,7 @@ describe Author do
       expect(author_item).to be_an_instance_of Item
     end
 
-    it 'should add self as a property of the item object' do
+    it 'add_item method should set author as author of item' do
       item_instance = Item.new('2011/10/01', false)
       @author.add_item(item_instance)
       item_author = item_instance.author
