@@ -34,7 +34,7 @@ class MusicAlbumManager
 
     @music_albums << hashed_album
 
-    update_genre_file(genre_object[1], hashed_album)
+    @genre_manager.update_genre_file(genre_object[1], hashed_album)
 
     update_data('music_albums', hashed_album)
 
@@ -62,13 +62,5 @@ class MusicAlbumManager
       puts "\nPublished Date - #{album['publish_date']} \n Archived - #{album['archived']} \n On Spotify - #{album['on_spotify']} \n Genre - #{album['genre_name']}"
       puts '__________________________________________________'
     end
-  end
-
-  def update_genre_file(index, album)
-    @genre_data = fetch_data('genre')
-    album_hash = album.to_hash.reject! { |k, _| k == 'genre' }
-    album_hash['genre_name'] = @genre_data[index]['name']
-    @genre_data[index]['items'] << album_hash
-    rewrite_data('genre', @genre_data)
   end
 end
