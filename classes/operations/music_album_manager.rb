@@ -25,11 +25,15 @@ class MusicAlbumManager
 
     genre_object = add_album_to_genre
 
-    album.genre = genre_object
+    album.genre = genre_object[0]
 
-    @music_albums << album.to_hash
+    hashed_album = album.to_hash
 
-    update_data('music_albums', album.to_hash)
+    @music_albums << hashed_album
+
+    update_genre_file(genre_object[1], hashed_album)
+
+    update_data('music_albums', hashed_album)
 
     puts 'Successfully added a music album to your catlog 😀'
     puts '__________________________________________________'
@@ -40,18 +44,29 @@ class MusicAlbumManager
     @genre_manager.list_genres
     genre_index = gets.chomp.to_i
 
-    return @genre_manager.create_genre if genre_index == @genre_manager.genre_data.length
+    if genre_index == @genre_manager.genre_data.length
+      return [@genre_manager.create_genre,
+              @genre_manager.genre_data.length - 1]
+    end
 
     hashed_genre = @genre_manager.genre_data[genre_index]
-    @genre_manager.format_genre(hashed_genre)
+    [@genre_manager.format_genre(hashed_genre), genre_index]
   end
 
   def list_albums
     puts 'Here are all the music albums in your catlog:'
-    @music_albums.each do |album| 
-      puts "\nPublished Date - #{album["publish_date"]} \n Archived - #{album["archived"]} \n On Spotify - #{album["on_spotify"]} \n Genre - #{album["genre"]["name"]}"
-      puts "__________________________________________________"
+    @music_albums.each do |album|
+      puts "\nPublished Date - #{album['publish_date']} \n Archived - #{album['archived']} \n On Spotify - #{album['on_spotify']} \n Genre - #{album['genre_name']}"
+      puts '__________________________________________________'
     end
+  end
+
+  def update_genre_file(index, album)
+    @genre_data = fetch_data('genre')
+    album_hash = album.to_hash.reject! { |k, _| k == 'genre' }
+    album_hash['genre_name'] = @genre_data[index]['name']
+    @genre_data[index]['items'] << album_hash
+    rewrite_data('genre', @genre_data)
   end
 
   def manage_music(option)

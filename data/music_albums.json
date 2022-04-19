@@ -3,18 +3,6 @@
     "publish_date" : "2020-10-01",
     "archived" : true,
     "on_spotify" : true,
-    "genre" : {
-      "name" : "Comedy",
-      "id" : 333
-    }
-  },
-  {
-    "publish_date" : "2020-10-01",
-    "archived" : null,
-    "on_spotify" : true,
-    "genre" : {
-      "name" : "Thriller",
-      "id" : 173
-    }
+    "genre_name" : "Comedy"
   }
 ]

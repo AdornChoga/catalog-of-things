@@ -1,16 +1,14 @@
 [
   {
-    "id" : 333,
+    "id" : 410,
     "name" : "Comedy",
     "items" : [
-
-    ]
-  },
-  {
-    "id" : 173,
-    "name" : "Thriller",
-    "items" : [
-
+      {
+        "publish_date" : "2020-10-01",
+        "archived" : true,
+        "on_spotify" : true,
+        "genre_name" : "Comedy"
+      }
     ]
   }
 ]

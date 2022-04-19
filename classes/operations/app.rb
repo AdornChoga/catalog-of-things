@@ -50,11 +50,8 @@ class App
       puts 'list all labels'
     when 3
       puts 'list all authors'
-    else
-      return
     end
   end
-
 
   def display_options
     puts 'What would you like to do today?'
