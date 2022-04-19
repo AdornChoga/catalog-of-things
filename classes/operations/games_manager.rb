@@ -27,7 +27,7 @@ class GamesManager
     when 1
       add_game
     when 2
-      puts 'List of games...'
+      listg_all_games
     when 3
       puts 'List of authors...'
     when 4
@@ -81,9 +81,15 @@ class GamesManager
     multiplayer, last_played_at, publish_date, archived = game_inputs
     new_game = Game.new(multiplayer, last_played_at, publish_date, archived)
     update_data('games', new_game.to_hash)
+    @games << new_game
     puts 'Game created successfully!'
     games_menu
   end
 
-  def listg_all_games; end
+  def listg_all_games
+    @games.map(&:to_hash).each_with_index do |game, index|
+      puts "(#{index}) - id: #{game['id']} - last_played_at: #{game['last_played_at']}"
+    end
+    games_menu
+  end
 end

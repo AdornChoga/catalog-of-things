@@ -12,5 +12,19 @@
     "last_played_at" : "2000-01-09",
     "publish_date" : "2001-12-09",
     "archived" : true
+  },
+  {
+    "id" : 96,
+    "multiplayer" : true,
+    "last_played_at" : "2020-01-01",
+    "publish_date" : "2020-03-06",
+    "archived" : true
+  },
+  {
+    "id" : 37,
+    "multiplayer" : true,
+    "last_played_at" : "2020-08-14",
+    "publish_date" : "2015-11-10",
+    "archived" : true
   }
 ]
