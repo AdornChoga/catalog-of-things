@@ -1,4 +1,4 @@
-require_relative '../classes/genre'
+require_relative '../classes/structure/genre'
 
 describe Genre do
   before(:all) do

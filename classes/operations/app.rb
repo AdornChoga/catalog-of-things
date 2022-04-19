@@ -1,6 +1,15 @@
-require './classes/bookmanager'
+require_relative 'bookmanager'
+require_relative 'genre_manager'
+require_relative 'music_album_manager'
 
 class App
+  attr_accessor :genre, :music_album, :book_manager
+
+  def initialize
+    @genre = GenreManager.new
+    @music_album = MusicAlbumManager.new(@genre)
+  end
+
   def list_of_options
     puts '
     1 - Books
@@ -20,7 +29,7 @@ class App
     when 3
       puts 'Movies operations'
     when 4
-      puts 'Music operations'
+      @music_album.menu_list
     when 5
       puts 'Spec operations'
     end

@@ -1,5 +1,5 @@
-require_relative '../classes/item'
-require_relative '../classes/author'
+require_relative '../classes/structure/item'
+require_relative '../classes/structure/author'
 
 describe Item do
   before(:each) do
@@ -44,14 +44,14 @@ describe Item do
 
     it 'add_method should set author of item to Author instance' do
       author = Author.new('Dean', 'Kutz')
-      @item.add_author = author
+      @item.author = author
       item_author = @item.author
       expect(item_author).to be_an_instance_of Author
     end
 
-    it 'add_author should add item to author items' do
+    it 'author should add item to author items' do
       author = Author.new('Dean', 'Kutz')
-      @item.add_author = author
+      @item.author = author
       author_items = author.items
       expect(author_items).to include(@item)
     end

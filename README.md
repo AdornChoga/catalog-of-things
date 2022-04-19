@@ -1,6 +1,6 @@
 # Catalog of things
 
-
+![screenshot](./catalog_of_my_things.png)
 
 ## Built With
 
@@ -36,6 +36,11 @@ Clone the repo and run bundle install in the command line to install the depende
 - GitHub: [@AdornChoga](https://github.com/AdornChoga)
 - Twitter: [@adornchoga](https://twitter.com/adorn_choga)
 - LinkedIn: [@adornchoga](https://www.linkedin.com/in/adorn-choga)
+
+👤 **Jos Kalenda**
+
+- GitHub: [@Jos](https://github.com/joskalenda)
+- LinkedIn: [@Jos](https://www.linkedin.com/in/joskalenda/)
 
 ## 🤝 Contributing
 
