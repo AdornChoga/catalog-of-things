@@ -14,7 +14,6 @@ describe Label do
     it 'can add an item' do
       label.add_item(item)
       expect(label.items).to include(item)
-      
     end
     it 'can add label' do
       expect(item.label).to eq(label)
