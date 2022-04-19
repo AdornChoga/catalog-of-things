@@ -1,5 +1,5 @@
-require './classes/item'
-require './classes/book'
+require './classes/structure/item'
+require './classes/structure/book'
 
 describe Book do
   context 'Tests for the book class' do

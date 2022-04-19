@@ -13,14 +13,9 @@ class Item
     @label = nil
   end
 
-  def add_label(label)
-    @label = label
-    label.items.push(self) unless label.items.include?(self)
-  end
-
   def label=(label)
     @label = label
-    label.items << self unless label.items.include?(self)
+    label.items.push(self) unless label.items.include?(self)
   end
 
   def can_be_archived?
@@ -32,7 +27,7 @@ class Item
     false
   end
 
-  def add_author=(author)
+  def author=(author)
     @author = author
     author.items << self unless author.items.include?(self)
   end

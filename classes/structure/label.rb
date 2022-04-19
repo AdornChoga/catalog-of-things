@@ -1,4 +1,4 @@
-require './classes/item'
+require_relative 'item'
 
 class Label
   attr_reader :title, :color, :items, :id
@@ -12,6 +12,6 @@ class Label
 
   def add_item(item)
     @items.push(item)
-    item.add_label(self)
+    item.label = self
   end
 end

@@ -1,4 +1,4 @@
-require './classes/app'
+require './classes/operations/app'
 
 def main
   app = App.new

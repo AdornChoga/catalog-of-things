@@ -1,5 +1,5 @@
-require './classes/item'
-require './classes/label'
+require_relative '../classes/structure/item'
+require_relative '../classes/structure/label'
 
 describe Label do
   context 'Tests for the label class' do

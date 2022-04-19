@@ -1,4 +1,4 @@
-require './classes/item'
+require_relative 'item'
 require 'json'
 
 class Book < Item

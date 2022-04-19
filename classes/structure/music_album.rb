@@ -14,5 +14,14 @@ class MusicAlbum < Item
     false
   end
 
+  def to_hash
+    {
+      'publish_date' => @publish_date.to_s,
+      'archived' => @archived,
+      'on_spotify' => @on_spotify,
+      'genre' => { 'name' => @genre.name, 'id' => @genre.id},
+    }
+  end
+
   private :can_be_archived?
 end
