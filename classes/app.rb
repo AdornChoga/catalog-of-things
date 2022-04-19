@@ -1,7 +1,6 @@
 require './classes/bookmanager'
 
 class App
-
   def list_of_options
     puts '
     1 - Books
