@@ -1,3 +1,17 @@
+require './classes/item'
+
 class Label
-  p 'in progress'
+  attr_reader :title, :color, :items, :id
+
+  def initialize(title, color)
+    @id = rand(0..50)
+    @title = title
+    @color = color
+    @items = []
+  end
+
+  def add_item(item)
+    @items.push(item)
+    item.add_label(self)
+  end
 end
