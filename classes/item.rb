@@ -10,11 +10,16 @@ class Item
     @archived = archived
     @author = nil
     @genre = nil
+    @label = nil
   end
 
   def add_label(label)
     @label = label
     label.items.push(self) unless label.items.include?(self)
+  end
+  def label=(label)
+    @label = label
+    label.items << self unless label.items.include?(self)
   end
 
   def can_be_archived?
