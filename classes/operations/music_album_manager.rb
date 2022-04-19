@@ -47,7 +47,11 @@ class MusicAlbumManager
   end
 
   def list_albums
-    puts 'all albums have been listed'
+    puts 'Here are all the music albums in your catlog:'
+    @music_albums.each do |album| 
+      puts "\nPublished Date - #{album["publish_date"]} \n Archived - #{album["archived"]} \n On Spotify - #{album["on_spotify"]} \n Genre - #{album["genre"]["name"]}"
+      puts "__________________________________________________"
+    end
   end
 
   def manage_music(option)
