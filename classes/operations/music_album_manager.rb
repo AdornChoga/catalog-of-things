@@ -19,10 +19,10 @@ class MusicAlbumManager
     publish_date = gets.chomp
 
     puts 'Is it on Spotify? (y/n)'
-    on_spotify = false ? gets.chomp.to_s.downcase == 'y' : true
+    on_spotify = gets.chomp.to_s.downcase != 'y'
 
     puts 'Is it archived? (y/n)'
-    archived = false ? gets.chomp.to_s.downcase == 'y' : true
+    archived = gets.chomp.to_s.downcase != 'y'
 
     album = MusicAlbum.new(publish_date, archived, on_spotify)
 
@@ -59,7 +59,10 @@ class MusicAlbumManager
   def list_albums
     puts 'Here are all the music albums in your catlog:'
     @music_albums.each do |album|
-      puts "\nPublished Date - #{album['publish_date']} \n Archived - #{album['archived']} \n On Spotify - #{album['on_spotify']} \n Genre - #{album['genre_name']}"
+      puts "Published Date - #{album['publish_date']}
+            Archived - #{album['archived']}
+            On Spotify - #{album['on_spotify']}
+            Genre - #{album['genre_name']}"
       puts '__________________________________________________'
     end
   end

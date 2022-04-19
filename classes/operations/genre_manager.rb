@@ -19,7 +19,7 @@ class GenreManager
     new_genre
   end
 
-  def list_genres(type = false)
+  def list_genres(type: false)
     @genre_data.each_with_index do |genre, index|
       puts "(#{index}) ID: #{genre['id']} - Genre Name: #{genre['name']}"
     end

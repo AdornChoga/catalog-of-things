@@ -10,5 +10,11 @@
     "archived" : null,
     "on_spotify" : true,
     "genre_name" : "Thriller"
+  },
+  {
+    "publish_date" : "2015-01-10",
+    "archived" : true,
+    "on_spotify" : true,
+    "genre_name" : "Comedy"
   }
 ]
