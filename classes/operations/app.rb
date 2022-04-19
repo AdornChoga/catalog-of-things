@@ -1,6 +1,7 @@
 require_relative 'bookmanager'
 require_relative 'genre_manager'
 require_relative 'music_album_manager'
+require_relative 'games_manager'
 
 class App
   attr_accessor :genre, :music_album, :book_manager
@@ -8,6 +9,7 @@ class App
   def initialize
     @genre = GenreManager.new
     @music_album = MusicAlbumManager.new(@genre)
+    @games = GamesManager.new
   end
 
   def list_of_options
@@ -25,7 +27,7 @@ class App
     when 1
       # books_operations
     when 2
-      puts 'Games operations'
+      @games.games_menu
     when 3
       puts 'Movies operations'
     when 4
