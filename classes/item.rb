@@ -17,6 +17,7 @@ class Item
     @label = label
     label.items.push(self) unless label.items.include?(self)
   end
+
   def label=(label)
     @label = label
     label.items << self unless label.items.include?(self)
