@@ -42,7 +42,7 @@ class App
     get_option = gets.chomp.to_i
     case get_option
     when 1
-      @genre.list_genres(true)
+      @genre.list_genres(type: false)
     when 2
       puts 'list all labels'
     when 3

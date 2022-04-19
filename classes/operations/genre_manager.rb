@@ -24,7 +24,7 @@ class GenreManager
       puts "(#{index}) ID: #{genre['id']} - Genre Name: #{genre['name']}"
     end
 
-    puts "(#{@genre_data.length}) - Create a new genre" unless type
+    puts "Press #{@genre_data.length} to Create a new genre" unless type
   end
 
   def format_genre(hashed_genre)
