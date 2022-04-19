@@ -1,7 +1,9 @@
 require_relative '../classes/item'
+require_relative '../classes/author'
 
 describe Item do
   before(:each) do
+    @author = Author.new('Jane', 'Doe')
     @item = Item.new('2011/10/01', false)
   end
 
@@ -21,6 +23,11 @@ describe Item do
     it 'should have a archived' do
       expect(@item.archived).to eq(false)
     end
+
+    it 'should have an author attribute' do
+      item_author = @item.author
+      expect(item_author).to eq nil
+    end
   end
 
   context 'test methods in the items class to' do
@@ -33,6 +40,20 @@ describe Item do
       item_instance = Item.new('2020/10/01', false)
       item_instance.move_to_archive
       expect(item_instance.archived).to eq(false)
+    end
+
+    it 'add_method should set author of item to Author instance' do
+      author = Author.new('Dean', 'Kutz')
+      @item.add_author = author
+      item_author = @item.author
+      expect(item_author).to be_an_instance_of Author
+    end
+
+    it 'add_author should add item to author items' do
+      author = Author.new('Dean', 'Kutz')
+      @item.add_author = author
+      author_items = author.items
+      expect(author_items).to include(@item)
     end
   end
 end
