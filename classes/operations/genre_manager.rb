@@ -19,12 +19,12 @@ class GenreManager
     new_genre
   end
 
-  def list_genres
+  def list_genres(type = false)
     @genre_data.each_with_index do |genre, index|
       puts "(#{index}) #{genre['id']} - #{genre['name']}"
     end
 
-    puts "(#{@genre_data.length}) - Create a new genre"
+    puts "(#{@genre_data.length}) - Create a new genre" if !type
   end
 
   def format_genre(hashed_genre)
