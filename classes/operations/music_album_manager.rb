@@ -19,10 +19,10 @@ class MusicAlbumManager
     publish_date = gets.chomp
 
     puts 'Is it on Spotify? (y/n)'
-    on_spotify = true if gets.chomp.to_s.downcase == 'y'
+    on_spotify = false ? gets.chomp.to_s.downcase == 'y' : true
 
     puts 'Is it archived? (y/n)'
-    archived = true if gets.chomp.to_s.downcase == 'y'
+    archived = false ? gets.chomp.to_s.downcase == 'y' : true
 
     album = MusicAlbum.new(publish_date, archived, on_spotify)
 
