@@ -4,7 +4,7 @@ require_relative '../classes/author'
 describe Item do
   before(:each) do
     @author = Author.new('Jane', 'Doe')
-    @item = Item.new('2011/10/01', false, @author)
+    @item = Item.new('2011/10/01', false)
   end
 
   context '#initialize' do
@@ -26,7 +26,7 @@ describe Item do
 
     it 'should have an author attribute' do
       item_author = @item.author
-      expect(item_author).to eq @author
+      expect(item_author).to eq nil
     end
   end
 
@@ -37,9 +37,16 @@ describe Item do
     end
 
     it 'move_to_archive method should retain the value of the archived attribute' do
-      item_instance = Item.new('2020/10/01', false, @author)
+      item_instance = Item.new('2020/10/01', false)
       item_instance.move_to_archive
       expect(item_instance.archived).to eq(false)
+    end
+
+    it 'should set author of item to Author instance' do
+      author = Author.new('Dean', 'Kutz')
+      @item.add_author = author
+      item_author = @author.author
+      expect(item_author.author).to be_an_instance_of Author
     end
   end
 end
