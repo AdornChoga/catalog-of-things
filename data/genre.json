@@ -10,5 +10,17 @@
         "genre_name" : "Comedy"
       }
     ]
+  },
+  {
+    "id" : 459,
+    "name" : "Thriller",
+    "items" : [
+      {
+        "publish_date" : "2020-10-01",
+        "archived" : null,
+        "on_spotify" : true,
+        "genre_name" : "Thriller"
+      }
+    ]
   }
 ]

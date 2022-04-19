@@ -1,8 +1,11 @@
 require_relative '../structure/music_album'
 require_relative '../../module/data_operations'
+require_relative '../../module/music_sub_menu'
 
 class MusicAlbumManager
   include DataOperations
+  include MusicSubMenu
+
   attr_accessor :music_albums
   attr_reader :genre_manager
 
@@ -67,22 +70,5 @@ class MusicAlbumManager
     album_hash['genre_name'] = @genre_data[index]['name']
     @genre_data[index]['items'] << album_hash
     rewrite_data('genre', @genre_data)
-  end
-
-  def manage_music(option)
-    case option
-    when 1
-      add_album
-    when 2
-      list_albums
-    end
-  end
-
-  def menu_list
-    puts 'Excellent choice! What would you like to do?'
-    puts '
-    1 - Add a music album
-    2 - List all music albums'
-    manage_music(gets.chomp.to_i)
   end
 end

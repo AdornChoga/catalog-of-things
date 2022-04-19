@@ -29,7 +29,7 @@ class App
     when 3
       puts 'Movies operations'
     when 4
-      @music_album.menu_list
+      @music_album.display_options
     when 5
       specifications
     end
