@@ -1,37 +1,14 @@
 [
   {
-    "id" : 20,
+    "id" : 82,
     "multiplayer" : true,
     "last_played_at" : "2020-01-11",
     "publish_date" : "2020-01-11",
-    "archived" : false
-  },
-  {
-    "id" : 74,
-    "multiplayer" : true,
-    "last_played_at" : "2020-01-22",
-    "publish_date" : "2020-01-22",
-    "archived" : false
-  },
-  {
-    "id" : 59,
-    "multiplayer" : true,
-    "last_played_at" : "2020-01-22",
-    "publish_date" : "2020-01-22",
-    "archived" : true
-  },
-  {
-    "id" : 59,
-    "multiplayer" : true,
-    "last_played_at" : "2020-09-12",
-    "publish_date" : "2020-09-12",
-    "archived" : false
-  },
-  {
-    "id" : 13,
-    "multiplayer" : false,
-    "last_played_at" : "2020-09-12",
-    "publish_date" : "2020-09-12",
-    "archived" : true
+    "archived" : false,
+    "author" : {
+      "id" : 14,
+      "first_name" : "Dean",
+      "last_name" : "Marver"
+    }
   }
 ]

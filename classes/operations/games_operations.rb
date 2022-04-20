@@ -24,6 +24,7 @@ class GamesOperations
     rewrite_data('authors', updated_authors)
 
     game_stored_in_games = new_game.to_hash.reject! { |k, _| k == 'item_type' }
+    game_stored_in_games['author'] = author.to_hash.reject! { |k, _| k == 'items' }
 
     update_data('games', game_stored_in_games)
     @games << new_game

@@ -17,6 +17,7 @@ class Game < Item
       'last_played_at' => @last_played_at,
       'publish_date' => @publish_date,
       'archived' => @archived,
+      'author' => @author,
       'item_type' => 'game'
     }
   end

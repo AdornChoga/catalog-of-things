@@ -6,7 +6,7 @@ module GamesMenu
     puts '
     1 - Add a new game
     2 - List all games
-    3 - Return to app menu
+    3 - Return to main menu
     '
     print 'Option: '
     gets.chomp.to_i
