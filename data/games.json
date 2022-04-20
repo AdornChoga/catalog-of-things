@@ -26,5 +26,12 @@
     "last_played_at" : "2020-09-12",
     "publish_date" : "2020-09-12",
     "archived" : false
+  },
+  {
+    "id" : 13,
+    "multiplayer" : false,
+    "last_played_at" : "2020-09-12",
+    "publish_date" : "2020-09-12",
+    "archived" : true
   }
 ]

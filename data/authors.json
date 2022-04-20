@@ -28,5 +28,16 @@
         "item_type" : "game"
       }
     ]
+  },
+  {
+    "id" : 97,
+    "first_name" : "Adorn",
+    "last_name" : "Choga",
+    "items" : [
+      {
+        "id" : 13,
+        "item_type" : "game"
+      }
+    ]
   }
 ]
