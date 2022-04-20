@@ -1,3 +1,12 @@
+
+/* Create genre table start */
+CREATE TABLE genre (
+        id INTEGER GENERATED ALWAYS AS IDENTITY,
+        name VARCHAR(255) NOT NULL, 
+       PRIMARY KEY(id) 
+    );
+/* Create genre table end */
+
 /* Create music_album table start */
 CREATE TABLE music_album ( 
         id INTEGER GENERATED ALWAYS AS IDENTITY, 
@@ -9,11 +18,3 @@ CREATE TABLE music_album (
     PRIMARY KEY(id) 
 );
 /* Create music_album table end */
-
-/* Create genre table start */
-CREATE TABLE genre (
-        id INTEGER GENERATED ALWAYS AS IDENTITY,
-        name VARCHAR(255) NOT NULL, 
-       PRIMARY KEY(id) 
-    );
-/* Create genre table end */
