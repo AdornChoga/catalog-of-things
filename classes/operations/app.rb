@@ -33,7 +33,25 @@ class App
     when 4
       @music_album.menu_list
     when 5
-      puts 'Spec operations'
+      specifications
+    end
+  end
+
+  def specifications
+    puts '
+    1 - List all genres
+    2 - List all labels
+    3 - List all authors
+    4 - to return to the main menu'
+
+    get_option = gets.chomp.to_i
+    case get_option
+    when 1
+      @genre.list_genres(true)
+    when 2
+      puts 'list all labels'
+    when 3
+      puts 'list all authors'
     end
   end
 

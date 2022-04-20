@@ -16,7 +16,8 @@ class Game < Item
       'multiplayer' => @multiplayer,
       'last_played_at' => @last_played_at,
       'publish_date' => @publish_date,
-      'archived' => @archived
+      'archived' => @archived,
+      'item_type' => 'game'
     }
   end
 

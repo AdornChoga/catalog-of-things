@@ -1,3 +1,4 @@
+require_relative 'author_manager'
 require_relative '../structure/game'
 require_relative '../../module/data_operations'
 require_relative '../../module/populate_games'
@@ -8,6 +9,7 @@ class GamesManager
 
   def initialize
     @games = populate_games
+    @authors = AuthorManager.new
   end
 
   def menu_options
@@ -15,8 +17,7 @@ class GamesManager
     puts '
     1 - Add a new game
     2 - List all games
-    3 - List all authors
-    4 - Return to app menu
+    3 - Return to app menu
     '
     gets.chomp.to_i
   end
@@ -27,7 +28,7 @@ class GamesManager
     when 1
       add_game
     when 2
-      listg_all_games
+      list_all_games
     when 3
       puts 'List of authors...'
     when 4
@@ -79,14 +80,28 @@ class GamesManager
 
   def add_game
     multiplayer, last_played_at, publish_date, archived = game_inputs
+    author = @authors.author_option_input
     new_game = Game.new(multiplayer, last_played_at, publish_date, archived)
-    update_data('games', new_game.to_hash)
+    new_game.author = author
+
+    game_parsed_to_author = new_game.to_hash.select! { |k, _| %w[id item_type].include?(k) }
+
+    updated_authors = fetch_data('authors').map do |stored_author|
+      stored_author['items'].push(game_parsed_to_author) if author.id == stored_author['id']
+      stored_author
+    end
+
+    rewrite_data('authors', updated_authors)
+
+    game_stored_in_games = new_game.to_hash.reject! { |k, _| k == 'item_type' }
+
+    update_data('games', game_stored_in_games)
     @games << new_game
     puts 'Game created successfully!'
     games_menu
   end
 
-  def listg_all_games
+  def list_all_games
     @games.map(&:to_hash).each_with_index do |game, index|
       puts "(#{index}) - id: #{game['id']} - last_played_at: #{game['last_played_at']}"
     end

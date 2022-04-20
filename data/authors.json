@@ -1,0 +1,13 @@
+[
+  {
+    "id" : 28,
+    "first_name" : "Dean",
+    "last_name" : "Kutz",
+    "items" : [
+      {
+        "id" : 90,
+        "item_type" : "game"
+      }
+    ]
+  }
+]
