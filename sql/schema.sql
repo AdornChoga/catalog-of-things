@@ -10,7 +10,7 @@ CREATE TABLE author (
 /* Create game table start */
 CREATE TABLE game (
     id INTEGER GENERATED ALWAYS AS IDENTITY,
-    published_date BOOLEAN,
+    published_date DATE,
     archived BOOLEAN,
     multiplayer BOOLEAN,
     last_played_at DATE,
