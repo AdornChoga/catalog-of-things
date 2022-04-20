@@ -49,17 +49,24 @@ class Bookmanager
     label_object = add_book_to_label
 
     # append book label to label ojb
-    book.label = label_object
+    book.label = label_object[0]
 
     @book_store << book.to_hash
+    @label_manager.update_label_file(label_object[1], book.to_hash)
     update_data('book_store', book.to_hash)
     puts 'The book was added with success'
   end
 
   def add_new_book
-    puts 'Please type in the name of the publisher:'
-    publisher = gets.chomp.to_s
-
+    state = false
+    until state
+      puts 'Please enter the name of the publisher:'
+      publisher = gets.chomp.to_s
+      state = true unless publisher == ''
+      puts 'Publisher name required'
+    end
+    publisher
+    
     puts 'Please type in good or bad for the cover_state:'
     cover_state = gets.chomp.to_s
 
@@ -72,10 +79,14 @@ class Bookmanager
     puts 'Select a label for your book'
     @label_manager.list_labels
     label_index = gets.chomp.to_i
-    return @label_manager.create_label if label_index == @label_manager.label_data.length
+
+    if label_index == @label_manager.label_data.length
+      return [@label_manager.create_label,
+              @label_manager.label_data.length - 1]
+    end
 
     hashed_label = @label_manager.label_data[label_index]
-    @genre_manager.format_label(hashed_label)
+    [@label_manager.format_label(hashed_label), label_index]
   end
 
   def list_all_books(books)
@@ -86,6 +97,7 @@ class Bookmanager
       puts "ID: #{book['id']}"
       puts "Published: #{book['publish_date']}"
       puts "Publisher: #{book['publisher']}"
+      puts "Label: Title - #{book['label']['title']} | Color - #{book['label']['color']}"
       puts '----------------------------------------------'
     end
   end
