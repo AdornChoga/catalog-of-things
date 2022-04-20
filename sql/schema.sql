@@ -10,7 +10,7 @@ CREATE TABLE genre (
 /* Create music_album table start */
 CREATE TABLE music_album ( 
         id INTEGER GENERATED ALWAYS AS IDENTITY, 
-        published_date BOOLEAN, 
+        published_date DATE, 
         archived BOOLEAN, 
         on_spotify BOOLEAN, 
         genre_id INTEGER,
