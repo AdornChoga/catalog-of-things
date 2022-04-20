@@ -19,17 +19,25 @@ class GenreManager
     new_genre
   end
 
-  def list_genres
+  def list_genres(type: false)
     @genre_data.each_with_index do |genre, index|
-      puts "(#{index}) #{genre['id']} - #{genre['name']}"
+      puts "(#{index}) ID: #{genre['id']} - Genre Name: #{genre['name']}"
     end
 
-    puts "(#{@genre_data.length}) - Create a new genre"
+    puts "Press #{@genre_data.length} to Create a new genre" unless type
   end
 
   def format_genre(hashed_genre)
     genre = Genre.new(hashed_genre['name'])
     genre.id = hashed_genre['id']
     genre
+  end
+
+  def update_genre_file(index, album)
+    @genre_data = fetch_data('genre')
+    album_hash = album.to_hash.reject! { |k, _| k == 'genre' }
+    album_hash['genre_name'] = @genre_data[index]['name']
+    @genre_data[index]['items'] << album_hash
+    rewrite_data('genre', @genre_data)
   end
 end
