@@ -1,0 +1,14 @@
+[
+  {
+    "id" : 82,
+    "multiplayer" : true,
+    "last_played_at" : "2020-01-11",
+    "publish_date" : "2020-01-11",
+    "archived" : false,
+    "author" : {
+      "id" : 14,
+      "first_name" : "Dean",
+      "last_name" : "Marver"
+    }
+  }
+]

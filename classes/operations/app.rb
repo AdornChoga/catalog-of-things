@@ -1,8 +1,11 @@
 require_relative 'bookmanager'
 require_relative 'genre_manager'
 require_relative 'music_album_manager'
+require_relative 'games_operations'
+require_relative '../../module/games/games_menu'
 
 class App
+  include GamesMenu
   attr_accessor :genre, :music_album, :book_manager
 
   def initialize
@@ -24,7 +27,7 @@ class App
     when 1
       # books_operations
     when 2
-      puts 'Games operations'
+      games_menu
     when 3
       @music_album.display_options
     when 4
@@ -51,7 +54,8 @@ class App
       when 2
         puts 'list all labels'
       when 3
-        puts 'list all authors'
+        puts '_______Authors_______'
+        AuthorOperations.new.list_authors
       end
       if get_option == 4
         puts 'Returning to the main menu:'
