@@ -1,3 +1,23 @@
+/* Create genre table start */
+CREATE TABLE genre (
+        id INTEGER GENERATED ALWAYS AS IDENTITY,
+        name VARCHAR(255) NOT NULL, 
+       PRIMARY KEY(id) 
+    );
+/* Create genre table end */
+
+/* Create music_album table start */
+CREATE TABLE music_album ( 
+        id INTEGER GENERATED ALWAYS AS IDENTITY, 
+        published_date DATE, 
+        archived BOOLEAN, 
+        on_spotify BOOLEAN, 
+        genre_id INTEGER,
+        CONSTRAINT fk_genre FOREIGN KEY (genre_id) REFERENCES genre(id) ON DELETE CASCADE
+    PRIMARY KEY(id) 
+);
+/* Create music_album table end */
+
 /* Create author table start */
 CREATE TABLE author (
     id INTEGER GENERATED ALWAYS AS IDENTITY,
@@ -19,4 +39,3 @@ CREATE TABLE game (
     PRIMARY KEY(id)
 );
 /* Create game table end */
-
