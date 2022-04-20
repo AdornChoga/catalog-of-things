@@ -1,0 +1,24 @@
+[
+  {
+    "id" : 37,
+    "publish_date" : "2000-02-02",
+    "publisher" : "TOPAZ",
+    "cover_state" : "bad",
+    "label" : {
+      "title" : "MODEL",
+      "color" : "ROUGE",
+      "id" : 14
+    }
+  },
+  {
+    "id" : 33,
+    "publish_date" : "2000-02-02",
+    "publisher" : "KARIS",
+    "cover_state" : "good",
+    "label" : {
+      "title" : "Sublimininal",
+      "color" : "Jaune",
+      "id" : 39
+    }
+  }
+]
