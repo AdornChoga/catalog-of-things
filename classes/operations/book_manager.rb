@@ -54,6 +54,7 @@ class Bookmanager
     @book_store << book.to_hash
     @label_manager.update_label_file(label_object[1], book.to_hash)
     update_data('book_store', book.to_hash)
+    puts
     puts 'The book was added with success'
   end
 
@@ -63,10 +64,10 @@ class Bookmanager
       puts 'Please enter the name of the publisher:'
       publisher = gets.chomp.to_s
       state = true unless publisher == ''
-      puts 'Publisher name required'
+      puts 'Publisher name required' unless state == true
+      publisher
     end
-    publisher
-    
+
     puts 'Please type in good or bad for the cover_state:'
     cover_state = gets.chomp.to_s
 

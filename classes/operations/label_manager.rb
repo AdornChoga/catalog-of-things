@@ -11,25 +11,24 @@ class LabelManager
   end
 
   def create_label
-
     state = false
 
     until state
+
       puts 'Please enter the label title:'
       title = gets.chomp.to_s
       state = true unless title == ''
-      puts 'Label title Required'
+      puts 'Label title Required' unless state == true
+      title
     end
-    
-    title
 
     puts 'Enter the color of the label'
     color = gets.chomp
 
     new_label = Label.new(title, color)
-    
+
     @label_data << new_label.to_hash
-    
+
     update_data('label', new_label.to_hash)
     new_label
   end

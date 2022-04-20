@@ -1,24 +1,68 @@
 [
   {
-    "id" : 37,
-    "publish_date" : "2000-02-02",
-    "publisher" : "TOPAZ",
+    "id" : 27,
+    "publish_date" : "0111-11-11",
+    "publisher" : "Topaz",
     "cover_state" : "bad",
     "label" : {
-      "title" : "MODEL",
-      "color" : "ROUGE",
-      "id" : 14
+      "title" : "Model",
+      "color" : "Red",
+      "id" : 15
     }
   },
   {
-    "id" : 33,
-    "publish_date" : "2000-02-02",
-    "publisher" : "KARIS",
-    "cover_state" : "good",
+    "id" : 4,
+    "publish_date" : "0111-01-01",
+    "publisher" : "topaz",
+    "cover_state" : "bad",
     "label" : {
-      "title" : "Sublimininal",
-      "color" : "Jaune",
-      "id" : 39
+      "title" : "THOAM",
+      "color" : "RED",
+      "id" : 22
+    }
+  },
+  {
+    "id" : 20,
+    "publish_date" : "0111-10-01",
+    "publisher" : "tuu",
+    "cover_state" : "bad",
+    "label" : {
+      "title" : "hhh",
+      "color" : "black",
+      "id" : 36
+    }
+  },
+  {
+    "id" : 34,
+    "publish_date" : "2222-02-02",
+    "publisher" : "Thopa",
+    "cover_state" : "bad",
+    "label" : {
+      "title" : "Mokla",
+      "color" : "red",
+      "id" : 29
+    }
+  },
+  {
+    "id" : 30,
+    "publish_date" : "2222-02-02",
+    "publisher" : "Topaz",
+    "cover_state" : "bad",
+    "label" : {
+      "title" : "Tilooo",
+      "color" : "RED",
+      "id" : 32
+    }
+  },
+  {
+    "id" : 12,
+    "publish_date" : "2033-02-02",
+    "publisher" : "Poutine",
+    "cover_state" : "bad",
+    "label" : {
+      "title" : "War",
+      "color" : "Black",
+      "id" : 31
     }
   }
 ]

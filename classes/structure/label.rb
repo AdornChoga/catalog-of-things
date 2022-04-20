@@ -20,7 +20,7 @@ class Label
       'id' => @id,
       'title' => @title,
       'color' => @color,
-      'itmes' => @items
+      'items' => @items
     }
   end
 end
