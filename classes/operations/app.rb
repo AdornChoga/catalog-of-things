@@ -52,7 +52,7 @@ class App
       when 1
         @genre.list_genres(type: true)
       when 2
-        puts 'list all labels'
+        @label.list_labels
       when 3
         puts 'list all authors'
       end
