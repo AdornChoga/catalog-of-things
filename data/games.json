@@ -1,9 +1,30 @@
 [
   {
-    "id" : 90,
+    "id" : 20,
     "multiplayer" : true,
-    "last_played_at" : "2020-01-12",
-    "publish_date" : "2019-01-11",
+    "last_played_at" : "2020-01-11",
+    "publish_date" : "2020-01-11",
+    "archived" : false
+  },
+  {
+    "id" : 74,
+    "multiplayer" : true,
+    "last_played_at" : "2020-01-22",
+    "publish_date" : "2020-01-22",
+    "archived" : false
+  },
+  {
+    "id" : 59,
+    "multiplayer" : true,
+    "last_played_at" : "2020-01-22",
+    "publish_date" : "2020-01-22",
     "archived" : true
+  },
+  {
+    "id" : 59,
+    "multiplayer" : true,
+    "last_played_at" : "2020-09-12",
+    "publish_date" : "2020-09-12",
+    "archived" : false
   }
 ]
