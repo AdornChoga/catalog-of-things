@@ -33,14 +33,14 @@ class LabelManager
     new_label
   end
 
-  def list_labels
+  def list_labels(type: false)
     @label_data.each_with_index do |label, index|
       puts '---------------------'
       puts "(#{index}) #{label['id']} - #{label['title']} - #{label['color']})"
       puts '---------------------'
     end
 
-    puts "(#{@label_data.length}) - Create a new label"
+    puts "(#{@label_data.length}) - Create a new label" unless type
   end
 
   def format_label(hashed_label)

@@ -57,7 +57,7 @@ class App
       when 1
         @genre.list_genres(type: true)
       when 2
-        @label.list_labels
+        @label.list_labels(type: true)
       when 3
         puts '_______Authors_______'
         @authors.list_authors
