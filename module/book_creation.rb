@@ -2,7 +2,6 @@ require 'json'
 require_relative 'data_operations'
 require_relative '../classes/structure/book'
 
-
 module BookCreation
   include DataOperations
 
