@@ -1,6 +1,7 @@
 require_relative 'book_manager'
 require_relative 'genre_manager'
 require_relative 'music_album_manager'
+require_relative 'label_manager'
 require_relative 'games_operations'
 require_relative 'label_manager'
 require_relative '../../module/games/games_menu'

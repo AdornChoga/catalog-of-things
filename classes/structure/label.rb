@@ -1,7 +1,8 @@
 require_relative 'item'
 
 class Label
-  attr_reader :title, :color, :items, :id
+  attr_reader :title, :color, :items
+  attr_accessor :id
 
   def initialize(title, color)
     @id = rand(0..50)
