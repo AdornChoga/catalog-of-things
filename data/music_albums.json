@@ -1,0 +1,26 @@
+[
+  {
+    "publish_date" : "2020-10-01",
+    "archived" : true,
+    "on_spotify" : true,
+    "genre_name" : "Comedy"
+  },
+  {
+    "publish_date" : "2020-10-01",
+    "archived" : null,
+    "on_spotify" : true,
+    "genre_name" : "Thriller"
+  },
+  {
+    "publish_date" : "2015-01-10",
+    "archived" : true,
+    "on_spotify" : true,
+    "genre_name" : "Comedy"
+  },
+  {
+    "publish_date" : "2000-11-11",
+    "archived" : true,
+    "on_spotify" : false,
+    "genre_name" : "Comedy"
+  }
+]

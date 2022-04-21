@@ -1,0 +1,62 @@
+[
+  {
+    "id" : 82,
+    "multiplayer" : true,
+    "last_played_at" : "2020-01-11",
+    "publish_date" : "2020-01-11",
+    "archived" : false,
+    "author" : {
+      "id" : 14,
+      "first_name" : "Dean",
+      "last_name" : "Marver"
+    }
+  },
+  {
+    "id" : 58,
+    "multiplayer" : true,
+    "last_played_at" : "2020-01-12",
+    "publish_date" : "2020-01-12",
+    "archived" : false,
+    "author" : {
+      "id" : 14,
+      "first_name" : "Dean",
+      "last_name" : "Marver"
+    }
+  },
+  {
+    "id" : 9,
+    "multiplayer" : true,
+    "last_played_at" : "2020-01-12",
+    "publish_date" : "2020-01-12",
+    "archived" : true,
+    "author" : {
+      "id" : 3,
+      "first_name" : "JK",
+      "last_name" : "Rowling"
+    }
+  },
+  {
+    "id" : 18,
+    "multiplayer" : true,
+    "last_played_at" : "2020-11-12",
+    "publish_date" : "2020-11-12",
+    "archived" : true,
+    "author" : {
+      "id" : 53,
+      "first_name" : "JK",
+      "last_name" : "Rowling"
+    }
+  },
+  {
+    "id" : 68,
+    "multiplayer" : true,
+    "last_played_at" : "2020-01-12",
+    "publish_date" : "2020-01-12",
+    "archived" : true,
+    "author" : {
+      "id" : 43,
+      "first_name" : "JK",
+      "last_name" : "Rowling"
+    }
+  }
+]

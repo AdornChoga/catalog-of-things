@@ -1,0 +1,28 @@
+[
+  {
+    "id" : 14,
+    "first_name" : "Dean",
+    "last_name" : "Marver",
+    "items" : [
+      {
+        "id" : 82,
+        "item_type" : "game"
+      },
+      {
+        "id" : 58,
+        "item_type" : "game"
+      }
+    ]
+  },
+  {
+    "id" : 43,
+    "first_name" : "JK",
+    "last_name" : "Rowling",
+    "items" : [
+      {
+        "id" : 68,
+        "item_type" : "game"
+      }
+    ]
+  }
+]
