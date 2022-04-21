@@ -1,18 +1,21 @@
-require_relative 'bookmanager'
+require_relative 'book_manager'
 require_relative 'genre_manager'
 require_relative 'music_album_manager'
+require_relative 'label_manager'
 require_relative 'games_operations'
 require_relative '../../module/games/games_menu'
 
 class App
   include GamesMenu
-  attr_accessor :genre, :music_album, :book_manager, :authors
+  attr_accessor :genre, :music_album, :book_manager, :label, :authors
 
   def initialize
     @genre = GenreManager.new
+    @label = LabelManager.new
     @music_album = MusicAlbumManager.new(@genre)
     @authors = AuthorOperations.new
     @games = GamesOperations.new(@authors)
+    @book_manager = Bookmanager.new(@label)
   end
 
   def list_of_options
@@ -27,7 +30,7 @@ class App
   def operations(option)
     case option
     when 1
-      # books_operations
+      @book_manager.books_operations
     when 2
       games_menu
     when 3
@@ -54,7 +57,7 @@ class App
       when 1
         @genre.list_genres(type: true)
       when 2
-        puts 'list all labels'
+        @label.list_labels
       when 3
         puts '_______Authors_______'
         @authors.list_authors
