@@ -10,5 +10,17 @@
       "first_name" : "Dean",
       "last_name" : "Marver"
     }
+  },
+  {
+    "id" : 95,
+    "multiplayer" : true,
+    "last_played_at" : "2000-11-11",
+    "publish_date" : "2000-11-11",
+    "archived" : false,
+    "author" : {
+      "id" : 14,
+      "first_name" : "Dean",
+      "last_name" : "Marver"
+    }
   }
 ]
