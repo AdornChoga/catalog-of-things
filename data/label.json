@@ -1,0 +1,135 @@
+[
+  {
+    "id" : 15,
+    "title" : "Model",
+    "color" : "Red",
+    "items" : [
+      {
+        "id" : 27,
+        "publish_date" : "0111-11-11",
+        "publisher" : "Topaz",
+        "cover_state" : "bad",
+        "label_title" : "Model"
+      }
+    ]
+  },
+  {
+    "id" : 22,
+    "title" : "THOAM",
+    "color" : "RED",
+    "items" : [
+      {
+        "id" : 4,
+        "publish_date" : "0111-01-01",
+        "publisher" : "topaz",
+        "cover_state" : "bad",
+        "label_title" : "THOAM"
+      }
+    ]
+  },
+  {
+    "id" : 36,
+    "title" : "hhh",
+    "color" : "black",
+    "items" : [
+      {
+        "id" : 20,
+        "publish_date" : "0111-10-01",
+        "publisher" : "tuu",
+        "cover_state" : "bad",
+        "label_title" : "hhh"
+      }
+    ]
+  },
+  {
+    "id" : 29,
+    "title" : "Mokla",
+    "color" : "red",
+    "items" : [
+      {
+        "id" : 34,
+        "publish_date" : "2222-02-02",
+        "publisher" : "Thopa",
+        "cover_state" : "bad",
+        "label_title" : "Mokla"
+      }
+    ]
+  },
+  {
+    "id" : 32,
+    "title" : "Tilooo",
+    "color" : "RED",
+    "items" : [
+      {
+        "id" : 30,
+        "publish_date" : "2222-02-02",
+        "publisher" : "Topaz",
+        "cover_state" : "bad",
+        "label_title" : "Tilooo"
+      }
+    ]
+  },
+  {
+    "id" : 31,
+    "title" : "War",
+    "color" : "Black",
+    "items" : [
+      {
+        "id" : 12,
+        "publish_date" : "2033-02-02",
+        "publisher" : "Poutine",
+        "cover_state" : "bad",
+        "label_title" : "War"
+      }
+    ]
+  },
+  {
+    "id" : 32,
+    "title" : "Kaola",
+    "color" : "red",
+    "items" : [
+      {
+        "id" : 32,
+        "publish_date" : "1111-11-11",
+        "publisher" : "Puto",
+        "cover_state" : "bad",
+        "label_title" : "Kaola"
+      }
+    ]
+  },
+  {
+    "id" : 30,
+    "title" : "KAKIO",
+    "color" : "KAKI",
+    "items" : [
+      {
+        "id" : 50,
+        "publish_date" : "1111-11-11",
+        "publisher" : "KARLOS",
+        "cover_state" : "bad",
+        "label_title" : "KAKIO"
+      }
+    ]
+  },
+  {
+    "id" : 47,
+    "title" : "kalo",
+    "color" : "red",
+    "items" : [
+      {
+        "id" : 4,
+        "publish_date" : "2021-12-12",
+        "publisher" : "ben",
+        "cover_state" : "bad",
+        "label_title" : "kalo"
+      },
+      {
+        "id" : 5,
+        "publish_date" : "2012-11-11",
+        "publisher" : "Conor",
+        "cover_state" : "bad",
+        "label_title" : "kalo"
+      }
+    ]
+  }
+]
