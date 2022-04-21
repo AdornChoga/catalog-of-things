@@ -1,3 +1,4 @@
+CREATE DATABASE catalog_of_things;
 /* Create genre table start */
 CREATE TABLE genre (
         id INTEGER GENERATED ALWAYS AS IDENTITY,
