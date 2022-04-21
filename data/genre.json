@@ -28,5 +28,17 @@
         "genre_name" : "Thriller"
       }
     ]
+  },
+  {
+    "id" : 413,
+    "name" : "Comedy",
+    "items" : [
+      {
+        "publish_date" : "2000-11-11",
+        "archived" : true,
+        "on_spotify" : false,
+        "genre_name" : "Comedy"
+      }
+    ]
   }
 ]

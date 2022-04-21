@@ -66,6 +66,13 @@
         "publisher" : "Topaz",
         "cover_state" : "bad",
         "label_title" : "Tilooo"
+      },
+      {
+        "id" : 3,
+        "publish_date" : "2000-11-11",
+        "publisher" : "Max",
+        "cover_state" : "bad",
+        "label_title" : "Tilooo"
       }
     ]
   },
@@ -129,6 +136,34 @@
         "publisher" : "Conor",
         "cover_state" : "bad",
         "label_title" : "kalo"
+      }
+    ]
+  },
+  {
+    "id" : 50,
+    "title" : "Mercure",
+    "color" : "Red",
+    "items" : [
+      {
+        "id" : 48,
+        "publish_date" : "2022-11-11",
+        "publisher" : "Paul",
+        "cover_state" : "bad",
+        "label_title" : "Mercure"
+      }
+    ]
+  },
+  {
+    "id" : 7,
+    "title" : "Bad man",
+    "color" : "black",
+    "items" : [
+      {
+        "id" : 42,
+        "publish_date" : "2000-11-20",
+        "publisher" : "max",
+        "cover_state" : "bad",
+        "label_title" : "Bad man"
       }
     ]
   }

@@ -10,7 +10,7 @@ CREATE TABLE genre (
 /* Create music_album table start */
 CREATE TABLE music_album ( 
         id INTEGER GENERATED ALWAYS AS IDENTITY, 
-        published_date DATE, 
+        publish_date DATE, 
         archived BOOLEAN, 
         on_spotify BOOLEAN, 
         genre_id INTEGER,
@@ -31,7 +31,7 @@ CREATE TABLE author (
 /* Create game table start */
 CREATE TABLE game (
     id INTEGER GENERATED ALWAYS AS IDENTITY,
-    published_date DATE,
+    publish_date DATE,
     archived BOOLEAN,
     multiplayer BOOLEAN,
     last_played_at DATE,
@@ -47,7 +47,7 @@ CREATE TABLE labels(
   title CHAR(50),
   color CHAR(50),
   PRIMARY KEY(id)
-)
+);
 /* Create label table end */
 
 /* Create book table start */
@@ -55,9 +55,10 @@ CREATE TABLE books(
   id INT GENERATED ALWAYS AS IDENTITY,
   publisher CHAR(50),
   cover_state CHAR(10),
-  published_date DATE,
+  publish_date DATE,
+  archived BOOLEAN,
   label_id  INT,
   CONSTRAINT fk_book FOREIGN KEY (label_id) REFERENCES labels (id) ON DELETE CASCADE,
   PRIMARY KEY(id)
-)
+);
 /* Creat book table end

@@ -108,5 +108,38 @@
       "color" : "red",
       "id" : 47
     }
+  },
+  {
+    "id" : 48,
+    "publish_date" : "2022-11-11",
+    "publisher" : "Paul",
+    "cover_state" : "bad",
+    "label" : {
+      "title" : "Mercure",
+      "color" : "Red",
+      "id" : 50
+    }
+  },
+  {
+    "id" : 3,
+    "publish_date" : "2000-11-11",
+    "publisher" : "Max",
+    "cover_state" : "bad",
+    "label" : {
+      "title" : "Tilooo",
+      "color" : "RED",
+      "id" : 32
+    }
+  },
+  {
+    "id" : 42,
+    "publish_date" : "2000-11-20",
+    "publisher" : "max",
+    "cover_state" : "bad",
+    "label" : {
+      "title" : "Bad man",
+      "color" : "black",
+      "id" : 7
+    }
   }
 ]
