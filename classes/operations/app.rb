@@ -7,12 +7,14 @@ require_relative '../../module/games/games_menu'
 
 class App
   include GamesMenu
-  attr_accessor :genre, :music_album, :book_manager, :label
+  attr_accessor :genre, :music_album, :book_manager, :label, :authors
 
   def initialize
     @genre = GenreManager.new
     @label = LabelManager.new
     @music_album = MusicAlbumManager.new(@genre)
+    @authors = AuthorOperations.new
+    @games = GamesOperations.new(@authors)
     @book_manager = Bookmanager.new(@label)
   end
 
@@ -58,7 +60,7 @@ class App
         @label.list_labels
       when 3
         puts '_______Authors_______'
-        AuthorOperations.new.list_authors
+        @authors.list_authors
       end
       if get_option == 4
         puts 'Returning to the main menu:'

@@ -9,7 +9,18 @@
         "item_type" : "game"
       },
       {
-        "id" : 95,
+        "id" : 58,
+        "item_type" : "game"
+      }
+    ]
+  },
+  {
+    "id" : 43,
+    "first_name" : "JK",
+    "last_name" : "Rowling",
+    "items" : [
+      {
+        "id" : 68,
         "item_type" : "game"
       }
     ]

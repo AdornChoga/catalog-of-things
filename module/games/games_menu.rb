@@ -17,9 +17,9 @@ module GamesMenu
     option = menu_options
     case option
     when 1
-      GamesOperations.new.add_game
+      @games.add_game
     when 2
-      GamesOperations.new.list_all_games
+      @games.list_all_games
     when 3
       return
     else
