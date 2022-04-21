@@ -64,5 +64,49 @@
       "color" : "Black",
       "id" : 31
     }
+  },
+  {
+    "id" : 32,
+    "publish_date" : "1111-11-11",
+    "publisher" : "Puto",
+    "cover_state" : "bad",
+    "label" : {
+      "title" : "Kaola",
+      "color" : "red",
+      "id" : 32
+    }
+  },
+  {
+    "id" : 50,
+    "publish_date" : "1111-11-11",
+    "publisher" : "KARLOS",
+    "cover_state" : "bad",
+    "label" : {
+      "title" : "KAKIO",
+      "color" : "KAKI",
+      "id" : 30
+    }
+  },
+  {
+    "id" : 4,
+    "publish_date" : "2021-12-12",
+    "publisher" : "ben",
+    "cover_state" : "bad",
+    "label" : {
+      "title" : "kalo",
+      "color" : "red",
+      "id" : 47
+    }
+  },
+  {
+    "id" : 5,
+    "publish_date" : "2012-11-11",
+    "publisher" : "Conor",
+    "cover_state" : "bad",
+    "label" : {
+      "title" : "kalo",
+      "color" : "red",
+      "id" : 47
+    }
   }
 ]

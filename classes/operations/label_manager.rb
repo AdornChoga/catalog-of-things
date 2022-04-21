@@ -44,7 +44,7 @@ class LabelManager
   end
 
   def format_label(hashed_label)
-    label = Label.new(hashed_label['title'])
+    label = Label.new(hashed_label['title'], hashed_label['color'])
     label.id = hashed_label['id']
     label
   end
