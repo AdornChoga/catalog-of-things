@@ -4,7 +4,7 @@
 
 ## Project Description
 
-- In this project, we created a console app that will help users to keep a record of different types of things they won: books, music albums, movies, and games. Everything was be based on a UML class diagram. The data is be stored in JSON files but we also added a schema for the database with tables structure analogical to the program's class structure.
+- In this project, we created a console app that will help users to keep a record of different types of things they won: books, music albums and games. Everything was be based on a UML class diagram above. The data is be stored in JSON files but we also added a schema for the database with tables structure analogical to the program's class structure.
 
 ## Built With
 
