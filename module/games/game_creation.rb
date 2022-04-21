@@ -53,7 +53,7 @@ module GameCreation
 
   def create_game
     multiplayer, last_played_at, publish_date, archived = game_inputs
-    author = AuthorOperations.new.author_option_input
+    author = @authors.author_option_input
     new_game = Game.new(multiplayer, last_played_at, publish_date, archived)
     new_game.author = author
     [new_game, author]

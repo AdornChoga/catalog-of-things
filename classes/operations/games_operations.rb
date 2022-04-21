@@ -9,9 +9,11 @@ class GamesOperations
   include PopulateGames
   include GameCreation
 
-  def initialize
+  attr_accessor :authors
+
+  def initialize(authors)
     @games = populate_games
-    @authors = AuthorOperations.new
+    @authors = authors
   end
 
   def add_game

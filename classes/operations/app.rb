@@ -6,11 +6,13 @@ require_relative '../../module/games/games_menu'
 
 class App
   include GamesMenu
-  attr_accessor :genre, :music_album, :book_manager
+  attr_accessor :genre, :music_album, :book_manager, :authors
 
   def initialize
     @genre = GenreManager.new
     @music_album = MusicAlbumManager.new(@genre)
+    @authors = AuthorOperations.new
+    @games = GamesOperations.new(@authors)
   end
 
   def list_of_options
@@ -55,7 +57,7 @@ class App
         puts 'list all labels'
       when 3
         puts '_______Authors_______'
-        AuthorOperations.new.list_authors
+        @authors.list_authors
       end
       if get_option == 4
         puts 'Returning to the main menu:'
